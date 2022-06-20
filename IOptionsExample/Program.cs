@@ -1,7 +1,6 @@
 ﻿var config = new ConfigurationManager();
 
-config.SetBasePath(Directory.GetCurrentDirectory())
-      .AddJsonFile("appsettings.json", false, true)
+config.AddConfigurationJsonSettings(Directory.GetCurrentDirectory())
       .AddInMemoryCollection( new Dictionary<string, string>
       {
           {"KeyOne", "ValueOne"},
